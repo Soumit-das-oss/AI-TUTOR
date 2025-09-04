@@ -1,0 +1,213 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #022a45, #3080a2); /* Blue gradient */
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Particle Background Layer */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+/* Container */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+/* Card Layout */
+.card-box {
+  background: rgba(211, 228, 227, 0.92);
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* Headings */
+.card-box h1 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #25a2a2;
+}
+.card-box p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Textarea & Input */
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background: rgb(220, 237, 239);
+  color: rgb(47, 66, 77);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.buttons button {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #13bc9a;
+  color: rgb(23, 54, 60);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.buttons button:hover {
+  background-color: #019875;
+}
+
+/* Result Output */
+.result-box {
+  background: rgb(220, 237, 239);
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 120px;
+  font-size: 25px;
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+}
+
+/* Notes Section */
+.notes-section {
+  background: rgb(220, 237, 239);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+.notes-section h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #063c43;
+}
+#notesList li {
+  font-size: 20px;
+  color: #173b3b; 
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  line-height: 1.6;
+}
+#notesList strong {
+  font-size: 25;
+  color: #0f3c3b;
+}
+.card-box p {
+  color: #143e3c; /* Example: gold color */
+  font-size: 20; /* Optional for better visibility */
+}
+#resultText {
+  color: #173b3b; /* Change to your preferred color */
+  font-size: 1rem; /* Optional: adjust size */
+}
+.quiz-section {
+  background: rgb(220, 237, 239);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #55cbcb;
+  border-radius: 8px;
+  border-left: 5px solid #00b894;
+}
+
+.quiz-question p {
+  margin-bottom: 10px;
+}
+
+.quiz-result {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.quiz-question label {
+  color: #34495e;  /* Change this */
+  font-size: 20px;
+  cursor: pointer;
+}
+.quiz-section h2 {
+  color: #173b3b; /* Change to your desired color */
+  font-size: 24px; /* Optional: increase size */
+}
+.quiz-option {
+  display: block;                /* Makes buttons stack vertically */
+  width: 100%;                   /* Full width */
+  padding: 10px 15px;
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #e3f6f5;     /* Soft aqua */
+  border: 2px solid #00b894;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+.quiz-option:hover {
+  background-color: #b2f7ef;
+}
+
+.quiz-option.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.quiz-option.wrong {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+/* Helps prevent items from splitting across pages */
+.notes-section, .quiz-section, .quiz-question, li, div, p {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Optional: force a break before big sections */
+.page-break {
+  page-break-before: always;
+  break-before: always;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEARNOVA AI</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- html2pdf CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Animated background -->
+  <div id="particles-js"></div>
+
+  <!-- Main content -->
+  <div class="main-container">
+    <div class="card-box">
+      <h1>📚 Learnova AI – Your AI Tutor Partner</h1>
+      <p>Learn anything – from text or image 📷</p>
+
+      <textarea id="textInput" placeholder="Enter your topic or question here..."></textarea>
+
+      <p class="or">or</p>
+      <input type="file" id="imageInput" accept="image/*" />
+
+      <div class="buttons">
+        <button onclick="handleExplain()">Explain</button>
+        <button onclick="makeNotes()">Make Notes</button>
+        <button onclick="generateQuiz()">Generate Quiz</button>
+        <button onclick="downloadPDF()">Download PDF</button>
+      </div>
+
+      <div id="resultText" class="result-box">
+        Your answer will appear here...
+      </div>
+
+      <div class="notes-section">
+        <h2>📝 Your Notes</h2>
+        <ul id="notesList"></ul>
+      </div>
+      <div class="quiz-section">
+      <h2>🧠 Quiz Time</h2>
+      <div id="quizContainer">
+        <!-- Quiz questions will appear here -->
+      </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='script-v2.js') }}"></script>
+
+  <!-- Particles config -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        color: { value: "#00aaff" },
+        shape: { type: "circle" },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00aaff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
